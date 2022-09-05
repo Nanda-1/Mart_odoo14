@@ -1,2 +1,10 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_koboymart_koboymart,koboymart.koboymart,model_koboymart_koboymart,base.group_user,1,1,1,1
+access_koboymart_barang,access.koboymart.barang,model_koboymart_barang,,1,1,1,1
+access_koboymart_kelompokbarang,access.koboymart.kelompokbarang,model_koboymart_kelompokbarang,,1,1,1,1
+access_koboymart_penjualan,access.koboymart.penjualan,model_koboymart_penjualan,,1,1,1,1
+access_koboymart_person,access.koboymart.person,model_koboymart_person,,1,1,1,1
+access_koboymart_respartner,access.koboymart.respartner,model_koboymart_respartner,,1,1,1,1
+access_koboymart_supplier,access.koboymart.supplier,model_koboymart_supplier,,1,1,1,1
+access_koboymart_kasir,access.koboymart.kasir,model_koboymart_kasir,,1,1,1,1
+access_koboymart_detailpenjualan,access.koboymart.detailpenjualan,model_koboymart_detailpenjualan,,1,1,1,1
+access_koboymart_cleaningservice,access.koboymart.cleaningservice,model_koboymart_cleaningservice,,1,1,1,1
