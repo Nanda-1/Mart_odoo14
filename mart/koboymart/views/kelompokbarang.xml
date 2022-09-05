@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- koboymart.kelompokbarang tree view -->
+    <record id="koboymart_kelompokbarang_view_tree" model="ir.ui.view">
+        <field name="name">koboymart.kelompokbarang.view.tree</field>
+        <field name="model">koboymart.kelompokbarang</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="kode_kelompok"/>
+                <field name="kode_rak"/>
+                <field name="jml_item"/>
+                <field name="daftar"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- koboymart.kelompokbarang form view -->
+    <record id="koboymart_kelompokbarang_view_form" model="ir.ui.view">
+        <field name="name">koboymart.kelompokbarang.view.form</field>
+        <field name="model">koboymart.kelompokbarang</field>
+        <field name="arch" type="xml">
+            <form string="Kelompok Barang">
+                <sheet>
+                    <group name="kelompok" string="Letak Kelompok">
+                        <field name="name"/>
+                        <field name="kode_kelompok"/>
+                        <field name="jml_item"/>
+                    </group>
+                    <group name="rak" string="Letak Barang">
+                        <field name="kode_rak"/>  
+                        <field name="barang_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- koboymart.kelompokbarang action window -->
+    <record id="koboymart_kelompokbarang_action" model="ir.actions.act_window">
+        <field name="name">Kelompok Barang</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">koboymart.kelompokbarang</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="koboymart_kelompokbarang_menu_act" 
+              name="Kelompok Barang" 
+              parent="koboymart_barang_menu_categ" 
+              action="koboymart_kelompokbarang_action" 
+              sequence="10"/>
+
+</odoo>

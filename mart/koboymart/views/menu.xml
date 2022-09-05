@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- This Menu Item will appear in the Upper bar, that's why It needs NO parent or action -->
+    <menuitem id="koboymart_menu_root" 
+              name="Koboy Mart" 
+              sequence="10"/>
+
+    <!-- This Menu Item Must have a parent -->
+    <menuitem id="koboymart_barang_menu_categ" 
+              name="Barang" 
+              parent="koboymart_menu_root" 
+              sequence="10"/>
+
+    <!-- This Menu Item Must have a parent -->
+    <menuitem id="koboymart_pegawai_menu_categ" 
+              name="Pegawai" 
+              parent="koboymart_menu_root" 
+              sequence="20"/>
+
+    <menuitem id="koboymart_transaksi_menu_categ" 
+              name="Transaksi" 
+              parent="koboymart_menu_root" 
+              sequence="42"/>
+
+</odoo>
