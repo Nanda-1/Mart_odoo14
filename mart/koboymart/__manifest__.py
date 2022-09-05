@@ -24,9 +24,20 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+        'security/ir.model.access.csv',
+        # 'views/views.xml',
+        # 'views/templates.xml',
+        'views/barang.xml',
+        'views/cleaning.xml',
+        'views/direksi.xml',
+        'views/kasir.xml',
+        'views/kelompokbarang.xml',
+        'views/konsumen.xml',
+        'views/menu.xml',
+        'views/penjualan.xml',
+        'views/person.xml',
+        'views/supplier.xml',
+    
     ],
     # only loaded in demonstration mode
     'demo': [

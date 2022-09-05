@@ -6,4 +6,4 @@ from . import kelompokbarang
 from . import penjualan
 from . import person
 from . import supplier
-from . import respartner
+# from . import respartner

@@ -1,1 +1,1 @@
-./odoo-bin --addons-path=/home/kz/Documents/Mart/addons,/home/kz/Documents/Mart/mart  --xmlrpc-port=8070 --db_port 5432 -d koboymart --limit-memory-hard 0 --limit-time-real=10000  -u koboymart
+./odoo-bin --addons-path=/home/kz/Documents/Mart/addons,/home/kz/Documents/Mart/mart  --xmlrpc-port=8070 --db_port 5432 -d koboymart --limit-memory-hard 0 --limit-time-real=10000 -u koboymart
