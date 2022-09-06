@@ -1,4 +1,5 @@
 from odoo import api, fields, models
+from odoo.exceptions import ValidationError
 
 
 class Penjualan(models.Model):
@@ -42,6 +43,31 @@ class Penjualan(models.Model):
                 ob.barang_id.stok += ob.qty
         record = super(Penjualan,self).unlink()
 
+    def write(self, vals):
+        for rec in self:
+            a = self.env['koboymart.detailpenjualan'].search([('penjualan_id','=',rec.id)])
+            print(a)
+
+        for data in a:
+           print(str(data.barang_id.name)+' '+str(data.qty)+' '+str(data.barang_id.stok))
+           data.barang_id.stok += data.qty
+        record = super(Penjualan,self).write(vals)
+        for rec in self:
+            b = self.env['koboymart.detailpenjualan'].search([('penjualan_id','=',rec.id)])
+            print(a)
+            print(b)
+            for databaru in b:
+                if databaru in a:
+                    print(str(databaru.barang_id.name)+' '+str(databaru.qty)+' '+str(databaru.barang_id.stok))
+                    databaru.barang_id.stok -= databaru.qty
+                else:
+                    pass
+        return record
+
+    _sql_constraints = [
+        ('no_nota_unik','unique (name)','Nomor Nota tidak boleh sama !!!')
+    ]
+
 
 
 
@@ -74,3 +100,13 @@ class DetailPenjualan(models.Model):
             self.env['koboymart.barang'].search([('id','=',record.barang_id.id)]).write({'stok' : record.barang_id.stok - record.qty})
         return record
 
+
+    @api.constrains('qty')
+    def check_quantity(self):
+        for rec in self:
+            if rec.qty <1:
+                raise ValidationError("Mau belanja {} berapa banyak sihh..".format(rec.barang_id.name))
+            elif (rec.barang_id.stok < rec.qty):
+                raise ValidationError('Stok {} tidak mencukupi, hanya tersedia {}'.format(rec.barang_id.name,rec.barang_id.stok))
+    
+    
