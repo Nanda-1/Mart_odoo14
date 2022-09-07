@@ -13,3 +13,5 @@ class Barang(models.Model):
                                         ondelete='cascade')
     supplier_id = fields.Many2many(comodel_name='koboymart.supplier', string='Supplier')
     stok = fields.Integer(string='Stok')
+
+    

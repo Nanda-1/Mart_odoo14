@@ -38,6 +38,7 @@
         'views/person.xml',
         'views/supplier.xml',
         'report/report.xml',
+        'wizzard/barang_datang.xml',
     
     ],
     # only loaded in demonstration mode

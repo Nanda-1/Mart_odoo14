@@ -7,3 +7,4 @@ access_koboymart_supplier,access.koboymart.supplier,model_koboymart_supplier,,1,
 access_koboymart_kasir,access.koboymart.kasir,model_koboymart_kasir,,1,1,1,1
 access_koboymart_detailpenjualan,access.koboymart.detailpenjualan,model_koboymart_detailpenjualan,,1,1,1,1
 access_koboymart_cleaningservice,access.koboymart.cleaningservice,model_koboymart_cleaningservice,,1,1,1,1
+access_barang_datang,access.barang.datang,model_barang_datang,,1,1,1,1
