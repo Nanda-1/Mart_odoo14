@@ -21,6 +21,9 @@
         <field name="model">koboymart.barang</field>
         <field name="arch" type="xml">
             <form string="">
+             <header>
+                    <button name="%(koboymart.barang_datang_action_wizzard)d" type="action" string="Input Barang" class="btn btn-warning"/>
+                </header>
                 <sheet>
                     <group>
                         <field name="name"/>

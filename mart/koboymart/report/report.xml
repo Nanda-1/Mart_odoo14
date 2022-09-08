@@ -1,13 +1,5 @@
 <odoo>
-    <record id="report_supplier_xlsx" model="ir.actions.report">
-        <field name="name">Download Supplier Excel</field>
-        <field name="model">koboymart.supplier</field>
-        <field name="report_type">xlsx</field>
-        <field name="report_name">koboymart.report_supplier_xlsx</field>
-        <field name="report_file">koboymart.report_supplier_xlsx</field>
-        <field name="binding_model_id" ref="model_koboymart_supplier"/>
-        <field name="binding_type">report</field>
-    </record>
+   
 
     <record id="report_penjualan_xlsx" model="ir.actions.report">
         <field name="name">Penjualan Excel</field>
@@ -18,4 +10,16 @@
         <field name="binding_model_id" ref="model_koboymart_penjualan"/>
         <field name="binding_type">report</field>
     </record>
+
+    
+    <record id="report_penjualan_pdf" model="ir.actions.report">
+        <field name="name">FAKTUR PDF</field>
+        <field name="model">koboymart.penjualan</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">koboymart.report_penjualan_pdf</field>
+        <field name="report_file">koboymart.report_penjualan_pdf</field>
+        <field name="binding_model_id" ref="model_koboymart_penjualan"/>
+        <field name="binding_type">report</field>
+    </record>
+
 </odoo>

@@ -38,6 +38,7 @@
         'views/person.xml',
         'views/supplier.xml',
         'report/report.xml',
+        'report/penjualanPdf.xml',
         'wizzard/barang_datang.xml',
     
     ],
